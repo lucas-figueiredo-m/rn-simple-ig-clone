@@ -5,8 +5,6 @@ export const stylesheet = createStyleSheet(({ fonts, margins, colors }) => ({
     flexDirection: 'row',
     alignItems: 'center',
     padding: margins.xl,
-    borderBottomWidth: 1,
-    borderBottomColor: 'rgba(0, 0, 0, 0.1)',
     width: '100%',
     gap: margins.lg,
   },
@@ -23,9 +21,10 @@ export const stylesheet = createStyleSheet(({ fonts, margins, colors }) => ({
   name: {
     fontSize: fonts.size.xxs,
     fontWeight: 'bold',
+    color: colors.primaryForegroundColor,
   },
   location: {
     fontSize: fonts.size.xxxs,
-    color: colors.grey,
+    color: colors.secondaryForegroundColor,
   },
 }));

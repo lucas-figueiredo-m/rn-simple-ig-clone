@@ -1,6 +1,7 @@
 import React from 'react';
 import { SafeAreaView, FlatList } from 'react-native';
 import { Post } from './components';
+import { Screen } from '@components';
 
 export const PostsList: React.FC = () => {
   const post = [
@@ -35,12 +36,14 @@ export const PostsList: React.FC = () => {
   ];
 
   return (
-    <SafeAreaView>
-      <FlatList
-        data={post}
-        keyExtractor={item => item.id}
-        renderItem={({ item, index }) => <Post item={item} index={index} />}
-      />
-    </SafeAreaView>
+    <Screen>
+      <SafeAreaView>
+        <FlatList
+          data={post}
+          keyExtractor={item => item.id}
+          renderItem={({ item, index }) => <Post item={item} index={index} />}
+        />
+      </SafeAreaView>
+    </Screen>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import type { PostHeaderProps } from './PostHeader.type';
 import FastImage from 'react-native-fast-image';
-import { HeartIcon } from '@assets/icons';
+import { EllipsisIcon } from '@assets/icons';
 import { useStyles } from 'react-native-unistyles';
 import { stylesheet } from './styles';
 
@@ -11,7 +11,7 @@ export const PostHeader: React.FC<PostHeaderProps> = ({
   name,
   location,
 }) => {
-  const { styles } = useStyles(stylesheet);
+  const { styles, theme } = useStyles(stylesheet);
   return (
     <View style={styles.container}>
       <FastImage style={styles.avatar} source={{ uri: avatar }} />
@@ -19,7 +19,11 @@ export const PostHeader: React.FC<PostHeaderProps> = ({
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.location}>{location}</Text>
       </View>
-      <HeartIcon color={'black'} />
+      <EllipsisIcon
+        width={24}
+        height={24}
+        color={theme.colors.primaryForegroundColor}
+      />
     </View>
   );
 };
