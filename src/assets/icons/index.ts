@@ -16,6 +16,15 @@ import PersonOutlineIcon from './person-circle-outline.svg';
 import PlayIcon from './play-circle.svg';
 import PlayOutlineIcon from './play-circle-outline.svg';
 
+import BookmarkIcon from './bookmark.svg';
+import BookmarkOutlineIcon from './bookmark-outline.svg';
+
+import ChatIcon from './chatbubble-outline.svg';
+
+import SendIcon from './send.svg';
+
+import EllipsisIcon from './ellipsis-horizontal.svg';
+
 export {
   HomeIcon,
   HomeOutlineIcon,
@@ -29,4 +38,9 @@ export {
   PersonOutlineIcon,
   PlayIcon,
   PlayOutlineIcon,
+  BookmarkIcon,
+  BookmarkOutlineIcon,
+  ChatIcon,
+  SendIcon,
+  EllipsisIcon,
 };
