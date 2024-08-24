@@ -1,0 +1,26 @@
+export const fonts = {
+  size: {
+    exs: 11,
+    xxxs: 12,
+    xxs: 13,
+    xs: 15,
+    sm: 16,
+    md: 17,
+    lg: 17,
+    xl: 20,
+    xxl: 22,
+    xxxl: 28,
+    exl: 34,
+  },
+  weight: {
+    ultralight: '100',
+    thin: '200',
+    light: '300',
+    regular: '400',
+    medium: '500',
+    semibold: '600',
+    heavy: '800',
+    bold: '700',
+    black: '900',
+  },
+} as const;
