@@ -21,6 +21,7 @@ module.exports = {
           '@components': ['./src/components'],
           '@HOC': ['./src/HOC'],
           '@assets': ['./src/assets'],
+          '@types': ['./src/types'],
           '@themes': ['./src/themes'],
           '@unistyles': ['./src/themes/unistyles.ts'],
           '@utils': ['./src/utils'],

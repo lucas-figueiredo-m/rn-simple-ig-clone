@@ -8,6 +8,7 @@
       "@hooks": ["./src/hooks"],
       "@navigators": ["./src/navigators"],
       "@components": ["./src/components"],
+      "@types": ["./src/types"],
       "@HOC": ["./src/HOC"],
       "@themes": ["./src/themes"],
       "@unistyles": ["./src/themes/unistyles.ts"],
