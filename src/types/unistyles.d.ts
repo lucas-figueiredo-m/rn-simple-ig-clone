@@ -1,4 +1,4 @@
-import { breakpoints, lightTheme } from '@themes';
+import { breakpoints, lightTheme, darkTheme } from '@themes';
 
 // if you defined breakpoints
 type AppBreakpoints = typeof breakpoints;
@@ -6,6 +6,7 @@ type AppBreakpoints = typeof breakpoints;
 // if you defined themes
 type AppThemes = {
   light: typeof lightTheme;
+  dark: typeof darkTheme;
 };
 
 // override library types
