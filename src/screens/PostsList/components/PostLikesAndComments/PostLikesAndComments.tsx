@@ -1,15 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { PostLikesAndCommentsProps } from './PostLikesAndComments.type';
-import {
-  NativeSyntheticEvent,
-  Text,
-  TextLayoutEventData,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { useStyles } from 'react-native-unistyles';
 import { stylesheet } from './styles';
 import FastImage from 'react-native-fast-image';
+import { useDescription } from './hooks';
 
 export const PostLikesAndComments: React.FC<PostLikesAndCommentsProps> = ({
   name,
@@ -19,20 +14,13 @@ export const PostLikesAndComments: React.FC<PostLikesAndCommentsProps> = ({
   avatar,
 }) => {
   const { styles } = useStyles(stylesheet);
-  const [numberOfLines, setNumberOfLines] = useState<1 | undefined>(undefined);
-  const [hasMoreThenOneLine, setHasMoreThenOneLine] = useState(false);
-
-  const isFirstTimeRendering = useRef(true);
-
-  const handleTextLayout = (e: NativeSyntheticEvent<TextLayoutEventData>) => {
-    if (e.nativeEvent.lines.length > 1 && isFirstTimeRendering.current) {
-      setHasMoreThenOneLine(true);
-      isFirstTimeRendering.current = false;
-      setNumberOfLines(1);
-    }
-  };
-
-  const showCommentModal = () => {};
+  const {
+    numberOfLines,
+    setNumberOfLines,
+    hasMoreThenOneLine,
+    handleTextLayout,
+    showCommentModal,
+  } = useDescription();
 
   return (
     <View style={styles.container}>
@@ -45,11 +33,7 @@ export const PostLikesAndComments: React.FC<PostLikesAndCommentsProps> = ({
           style={styles.description}>
           <Text style={styles.name}>{name}</Text>
           <Text> </Text>
-          <Text>
-            {description} uisadhfijashdf jasdhfiuasdfhsldjkafhas jkldfhasjkdl
-            fhasdjkfha jkdlfh asdjklfhas djklfhaljks dfhasl fhasjkldfhas djklfh
-            aslfhasdjkl fhasdjkl fnasdjkfhasd jklfha sdjklf
-          </Text>
+          <Text>{description}</Text>
         </Text>
         {numberOfLines === 1 && hasMoreThenOneLine && (
           <Text
