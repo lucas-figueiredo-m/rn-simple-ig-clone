@@ -6,6 +6,7 @@ import { PostActionButtons } from '../PostActionButtons';
 import FastImage from 'react-native-fast-image';
 import { useStyles } from 'react-native-unistyles';
 import { stylesheet } from './styles';
+import { PostLikesAndComments } from '../PostLikesAndComments';
 
 export const Post: React.FC<PostProps> = ({ item, index }) => {
   const { styles } = useStyles(stylesheet);
@@ -22,6 +23,14 @@ export const Post: React.FC<PostProps> = ({ item, index }) => {
       <FastImage style={styles.postImage} source={{ uri: item.image }} />
 
       <PostActionButtons isLiked={item.liked} isSaved={item.saved} />
+
+      <PostLikesAndComments
+        name={item.name}
+        description={item.description}
+        likes={item.likes}
+        comments={item.comments}
+        avatar={item.image}
+      />
     </Animated.View>
   );
 };
