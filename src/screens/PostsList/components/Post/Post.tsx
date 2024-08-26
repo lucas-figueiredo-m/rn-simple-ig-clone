@@ -3,13 +3,14 @@ import Animated, { FadeInDown, FadeOutUp } from 'react-native-reanimated';
 import type { PostProps } from './Post.type';
 import { PostHeader } from '../PostHeader';
 import { PostActionButtons } from '../PostActionButtons';
-import FastImage from 'react-native-fast-image';
+import { Image } from 'react-native';
 import { useStyles } from 'react-native-unistyles';
 import { stylesheet } from './styles';
 import { PostLikesAndComments } from '../PostLikesAndComments';
 
 export const Post: React.FC<PostProps> = ({ item, index }) => {
   const { styles } = useStyles(stylesheet);
+  console.log('Post', item.image);
   return (
     <Animated.View
       entering={FadeInDown.delay(index * 50).springify()}
@@ -20,7 +21,7 @@ export const Post: React.FC<PostProps> = ({ item, index }) => {
         location={item.location}
       />
 
-      <FastImage style={styles.postImage} source={{ uri: item.image }} />
+      <Image style={styles.postImage} source={{ uri: item.image }} />
 
       <PostActionButtons isLiked={item.liked} isSaved={item.saved} />
 

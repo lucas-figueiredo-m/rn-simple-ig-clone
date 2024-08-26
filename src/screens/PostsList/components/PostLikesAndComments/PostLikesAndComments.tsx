@@ -1,9 +1,8 @@
 import React from 'react';
 import { PostLikesAndCommentsProps } from './PostLikesAndComments.type';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View, Image } from 'react-native';
 import { useStyles } from 'react-native-unistyles';
 import { stylesheet } from './styles';
-import FastImage from 'react-native-fast-image';
 import { useDescription, usePostCreatedAt } from './hooks';
 
 export const PostLikesAndComments: React.FC<PostLikesAndCommentsProps> = ({
@@ -51,7 +50,7 @@ export const PostLikesAndComments: React.FC<PostLikesAndCommentsProps> = ({
       <TouchableOpacity
         onPress={showCommentModal}
         style={styles.avatarContainer}>
-        <FastImage style={styles.avatar} source={{ uri: avatar }} />
+        <Image style={styles.avatar} source={{ uri: avatar }} />
         <Text style={styles.commentInput}>Agrega un comentario...</Text>
       </TouchableOpacity>
 

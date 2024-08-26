@@ -12,7 +12,6 @@ export const stylesheet = createStyleSheet(({ fonts, margins, colors }) => ({
     width: 42,
     height: 42,
     borderRadius: 25,
-    backgroundColor: 'red',
   },
   textsContainer: {
     flex: 1,
