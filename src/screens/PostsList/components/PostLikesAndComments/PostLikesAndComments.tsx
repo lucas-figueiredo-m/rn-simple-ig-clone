@@ -3,7 +3,8 @@ import { PostLikesAndCommentsProps } from './PostLikesAndComments.type';
 import { Text, TouchableOpacity, View, Image } from 'react-native';
 import { useStyles } from 'react-native-unistyles';
 import { stylesheet } from './styles';
-import { useDescription, usePostCreatedAt } from './hooks';
+import { useDescription } from './hooks';
+import { DateTimeUtils } from '@utils';
 
 export const PostLikesAndComments: React.FC<PostLikesAndCommentsProps> = ({
   name,
@@ -21,8 +22,6 @@ export const PostLikesAndComments: React.FC<PostLikesAndCommentsProps> = ({
     handleTextLayout,
     showCommentModal,
   } = useDescription();
-
-  const formatedDate = usePostCreatedAt(date);
 
   return (
     <View style={styles.container}>
@@ -54,7 +53,7 @@ export const PostLikesAndComments: React.FC<PostLikesAndCommentsProps> = ({
         <Text style={styles.commentInput}>Agrega un comentario...</Text>
       </TouchableOpacity>
 
-      <Text style={styles.timeAgo}>{formatedDate}</Text>
+      <Text style={styles.timeAgo}>{DateTimeUtils.formatPostDate(date)}</Text>
     </View>
   );
 };
