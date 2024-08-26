@@ -6,7 +6,6 @@ To ensure a smooth collaboration, please follow these guidelines when creating c
 
 - [Code Style](#code-style)
 - [Creating Components](#creating-components)
-- [Implementing Features](#implementing-features)
 - [Committing Code](#committing-code)
 
 ## Code Style
