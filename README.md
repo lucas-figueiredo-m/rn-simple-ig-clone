@@ -101,7 +101,7 @@ Then, on another terminal, run the platform-specific start command
 │   ├── screens/        # App screens
 │   ├── services/       # Project's external services and peripheral code
 │   └── themes/         # Set up of project's default spacing, font sizes color themes, etc
-│   └── types/         # Project's resusable types and global type declarations
+│   └── types/          # Project's resusable types and global type declarations
 │   ├── App.tsx         # Entry point of the app
 ├── index.js            # Entry point for React Native
 └── package.json        # Project configuration file
