@@ -33,8 +33,8 @@ To set up the project locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/project-name.git
-   cd project-name
+   git clone https://github.com/lucas-figueiredo-m/rn-simple-ig-clone
+   cd rn-simple-ig-clone
    ```
 
 2. **Install Dependencies**
@@ -107,3 +107,7 @@ Then, on another terminal, run the platform-specific start command
 └── package.json        # Project configuration file
 
 ```
+
+## Contributing
+
+Check out the [contributing page of the project](https://github.com/lucas-figueiredo-m/rn-simple-ig-clone/blob/main/CONTRIBUTING.md)
