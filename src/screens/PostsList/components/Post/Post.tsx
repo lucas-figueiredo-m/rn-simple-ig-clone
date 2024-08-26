@@ -10,7 +10,7 @@ import { PostLikesAndComments } from '../PostLikesAndComments';
 
 export const Post: React.FC<PostProps> = ({ item, index }) => {
   const { styles } = useStyles(stylesheet);
-  console.log('Post', item.image);
+
   return (
     <Animated.View
       entering={FadeInDown.delay(index * 50).springify()}
