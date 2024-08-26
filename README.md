@@ -2,6 +2,11 @@
 
 A brief description of your project.
 
+<div align="center">
+  <img src="./screenshots/android-screenshot.png" width="25%" height="25%" alt="print-app">
+  <img src="./screenshots/ios-screenshot.png" width="25%" height="25%" alt="print-app">
+</div>
+
 ## Table of Contents
 
 - [Introduction](#introduction)
