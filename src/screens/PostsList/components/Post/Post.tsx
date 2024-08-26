@@ -30,6 +30,7 @@ export const Post: React.FC<PostProps> = ({ item, index }) => {
         likes={item.likes}
         comments={item.comments}
         avatar={item.image}
+        date={item.createdAt}
       />
     </Animated.View>
   );

@@ -51,4 +51,10 @@ export const stylesheet = createStyleSheet(({ margins, colors, fonts }) => ({
     fontSize: fonts.size.exs,
     fontWeight: fonts.weight.medium,
   },
+
+  timeAgo: {
+    color: colors.secondaryForegroundColor,
+    fontSize: fonts.size.exs,
+    fontWeight: fonts.weight.medium,
+  },
 }));

@@ -4,4 +4,5 @@ export type PostLikesAndCommentsProps = {
   comments: number;
   likes: number;
   avatar: string;
+  date: string;
 };

@@ -17,7 +17,7 @@ export const PostsList: React.FC = () => {
   const { styles, theme } = useStyles(stylesheet);
   const { data, isLoading } = useQuery({
     queryKey: ['posts'],
-    queryFn: () => getPostsList(),
+    queryFn: getPostsList,
   });
 
   if (isLoading) {
