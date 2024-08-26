@@ -4,8 +4,7 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { useStyles } from 'react-native-unistyles';
 import { stylesheet } from './styles';
 import FastImage from 'react-native-fast-image';
-import { useDescription } from './hooks';
-import moment from 'moment';
+import { useDescription, usePostCreatedAt } from './hooks';
 
 export const PostLikesAndComments: React.FC<PostLikesAndCommentsProps> = ({
   name,
@@ -24,12 +23,7 @@ export const PostLikesAndComments: React.FC<PostLikesAndCommentsProps> = ({
     showCommentModal,
   } = useDescription();
 
-  const currentYear = new Date().getFullYear();
-
-  const postYear = new Date(date).getFullYear();
-
-  const dateStringFormat =
-    postYear === currentYear ? 'DD MMMM' : 'DD MMMM YYYY';
+  const formatedDate = usePostCreatedAt(date);
 
   return (
     <View style={styles.container}>
@@ -61,9 +55,7 @@ export const PostLikesAndComments: React.FC<PostLikesAndCommentsProps> = ({
         <Text style={styles.commentInput}>Agrega un comentario...</Text>
       </TouchableOpacity>
 
-      <Text style={styles.timeAgo}>
-        {moment(date).format(dateStringFormat)}
-      </Text>
+      <Text style={styles.timeAgo}>{formatedDate}</Text>
     </View>
   );
 };
